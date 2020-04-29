@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="384.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="albumcovers.FXMLDocumentController">
+    <children>
+      <MenuBar prefHeight="25.0" prefWidth="369.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="33.0" prefHeight="17.0" prefWidth="359.0" text="Spotify Album Covers" textAlignment="CENTER">
+         <font>
+            <Font name="Algerian" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="prev" layoutX="14.0" layoutY="189.0" mnemonicParsing="false" onAction="#prevButtonAction" text="Prev" />
+      <Button fx:id="next" layoutX="314.0" layoutY="189.0" mnemonicParsing="false" onAction="#nextButtonAction" text="Next" />
+      <Label layoutX="21.0" layoutY="312.0" prefHeight="16.0" prefWidth="82.0" text="Artist:    :">
+         <font>
+            <Font name="Algerian" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="artistName" layoutX="81.0" layoutY="310.0" onAction="#searchButtonAction" prefHeight="25.0" prefWidth="199.0" promptText="Enter artist's name" />
+      <Button fx:id="search" layoutX="294.0" layoutY="310.0" mnemonicParsing="false" onAction="#searchButtonAction" prefHeight="25.0" prefWidth="61.0" text="Search" />
+      <ImageView fx:id="img" fitHeight="227.0" fitWidth="236.0" layoutX="66.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/spotify.png" />
+         </image></ImageView>
+      <Label fx:id="Message_Label" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="344.0" prefHeight="17.0" prefWidth="359.0" text="Type in artist's name" />
+      <Button fx:id="saveImage" layoutX="276.0" layoutY="340.0" mnemonicParsing="false" onAction="#saveButtonAction" text="Save Image" />
+    </children>
+</AnchorPane>
